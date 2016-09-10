@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Submission.delete_all
+Submission.create([
+  {submission_link: 'answer 1a'},
+  {submission_link: 'answer 1b'},
+  {submission_link: 'answer 1c'},
+  {submission_link: 'answer 2d'}
+])
