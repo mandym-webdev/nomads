@@ -1,5 +1,12 @@
 <ul>
 <% @submissions.each do |submission| %>
   <li><%= submission.submission_link %></li>
+  <li><%= submission.title %></li>
+  <li><%= submission.location %></li>
+  <li><%= submission.bedrooms %></li>
+  <li><%= submission.bathrooms %></li>
+  <li><%= submission.img1 %></li>
+  <li><%= submission.publish %></li>
 <% end %>
 </ul>
+

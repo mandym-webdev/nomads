@@ -8,9 +8,8 @@
 
 
 Submission.delete_all
-Submission.create([
-  {submission_link: 'answer 1a'},
-  {submission_link: 'answer 1b'},
-  {submission_link: 'answer 1c'},
-  {submission_link: 'answer 2d'}
-])
+
+5.times do |i|
+  Submission.create(submission_link: "Link ##{i}", title: "A product.", location: "paris", bedrooms: 3, bathrooms: 2, img1: "img")
+end
+

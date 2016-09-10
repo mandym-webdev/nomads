@@ -18,8 +18,16 @@ ActiveRecord::Schema.define(version: 20160910190708) do
 
   create_table "submissions", force: :cascade do |t|
     t.string   "submission_link"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "title"
+    t.string   "location"
+    t.integer  "bedrooms"
+    t.integer  "bathrooms"
+    t.string   "img1"
+    t.string   "img2"
+    t.string   "img3"
+    t.string   "publish",         default: "no"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
 end
