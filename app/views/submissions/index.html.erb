@@ -1,26 +1,4 @@
-<!-- Navigation -->
-<div class="title-bar" data-responsive-toggle="realEstateMenu" data-hide-for="small">
-  <button class="menu-icon" type="button" data-toggle></button>
-  <div class="title-bar-title">Menu</div>
-</div>
 
-<div class="top-bar" id="realEstateMenu">
-  <div class="top-bar-left">
-    <ul class="menu" data-responsive-menu="accordion">
-<!--       <li class="menu-text">Interplanetary</li>
-      <li><a href="#">One</a></li>
-      <li><a href="#">Two</a></li>
-      <li><a href="#">Three</a></li> -->
-    </ul>
-  </div>
-  <div class="top-bar-right">
-    <ul class="menu">
-      <li><a href="#">My Account</a></li>
-      <li><a class="button">Login</a></li>
-    </ul>
-  </div>
-</div>
-<!-- /Navigation -->
 
 
 <br>
@@ -29,7 +7,7 @@
 
   <div class="medium-7 large-6 columns">
     <h1>Nomad Approved</h1>
-    <p class="subheader">Actual reviews from actual nomads so you can be sure that the place you're staying will fit your needs. </p>
+    <p class="subheader">Reviews from actual nomads so you can be sure that the place you're staying will fit your needs. </p>
     <button class="button">Add a New Listing</button>
     <!-- <button class="button">Start a free trial</button> -->
   </div>
@@ -83,7 +61,7 @@
           <div class="callout" data-equalizer-watch>
             <p><%= submission.location %></p>
             <p><img src="<%= submission.img1 %>" ></p>
-            <p class="lead"><%= link_to submission.title, submission.submission_link %></p>
+            <p class="lead"><%= link_to submission.title, submission %></p>
             <p class="subheader"><%= submission.bedrooms %></td> Bed <%= submission.bathrooms %></td> Bath <%= submission.lodging_type %></p>
           </div>
         </div>
@@ -108,7 +86,7 @@
       <% @submissions.each do |submission| %>
         <tbody>
           <tr>
-            <td><%= link_to submission.title, submission.submission_link %></td>
+            <td><%= link_to submission.title, submission %></td>
             <td><%= submission.location %></td>
             <td><%= submission.lodging_type %></td>
             <td><%= submission.bedrooms %></td>

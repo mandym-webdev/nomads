@@ -8,6 +8,10 @@ class SubmissionsController < ApplicationController
     @submission = Submission.new
   end
 
+  def show
+    @submission = Submission.find( params[:id] )
+  end
+
   def create
     @submission = Submission.new(submission_params)
     if @submission.save
