@@ -1,8 +1,6 @@
 
 
 
-<form>
-
   <%= form_for (@submission) do |submission| %>
 
     <div class="row">
@@ -19,14 +17,19 @@
     </div>
 
     <div class="row">
-      <div class="medium-6 columns">
+      <div class="medium-3 columns">
         <label>Bedrooms
           <%= submission.select :bedrooms, ["0", "1", "2", "3+"]%>
         </label>
       </div>
-      <div class="medium-6 columns">
+      <div class="medium-3 columns">
         <label>Private Bathrooms
           <%= submission.select :bathrooms, ["0", "1", "2", "3+"]%>
+        </label>
+      </div>
+      <div class="medium-6 columns">
+        <label>Lodging Type
+          <%= submission.select :lodging_type, ["Apartment", "House", "Hostel", "Co-Living", "Hotel"]%>
         </label>
       </div>
     </div>
@@ -56,6 +59,6 @@
     </div>
 
   <% end %>
-  
-</form>
+
+
 

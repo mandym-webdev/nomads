@@ -20,7 +20,7 @@ class SubmissionsController < ApplicationController
   private
 
   def submission_params
-    params.require(:submission).permit(:submission_link, :location, :bedrooms, :bathrooms, :img1, :img2, :img3)
+    params.require(:submission).permit(:submission_link, :location, :lodging_type, :bedrooms, :bathrooms, :img1, :img2, :img3)
   end
 end
 

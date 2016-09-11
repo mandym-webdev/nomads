@@ -5,6 +5,7 @@ class CreateSubmissions < ActiveRecord::Migration
       t.string :submission_link
       t.string :title
       t.string :location
+      t.string :lodging_type
       t.integer :bedrooms
       t.integer :bathrooms
       t.string :img1
