@@ -6,12 +6,13 @@ class CreateSubmissions < ActiveRecord::Migration
       t.string :title
       t.string :location
       t.string :lodging_type
-      t.integer :bedrooms
-      t.integer :bathrooms
+      t.string :bedrooms
+      t.string :bathrooms
       t.string :img1
       t.string :img2
       t.string :img3
       t.string :publish, default: 'no'
+      t.belongs_to :user
 
       t.timestamps null: false
     end

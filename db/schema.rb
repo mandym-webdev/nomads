@@ -21,12 +21,13 @@ ActiveRecord::Schema.define(version: 20160912090157) do
     t.string   "title"
     t.string   "location"
     t.string   "lodging_type"
-    t.integer  "bedrooms"
-    t.integer  "bathrooms"
+    t.string   "bedrooms"
+    t.string   "bathrooms"
     t.string   "img1"
     t.string   "img2"
     t.string   "img3"
     t.string   "publish",         default: "no"
+    t.integer  "user_id"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
   end
