@@ -1,6 +1,4 @@
 
-
-
 <br>
 
 <div class="row">
@@ -8,7 +6,7 @@
   <div class="medium-7 large-6 columns">
     <h1>Nomad Approved</h1>
     <p class="subheader">Reviews from actual nomads so you can be sure that the place you're staying will fit your needs. </p>
-    <button class="button">Add a New Listing</button>
+    <button class="button"><%= link_to 'Add a New Listing', new_submission_path %></button>
     <!-- <button class="button">Start a free trial</button> -->
   </div>
 
@@ -25,12 +23,6 @@
               <input type="text" placeholder="Search listings">
             </label>
           </div>
-          <!-- <div class="small-12 columns">
-            <label>Number of Moons
-              <input type="number" placeholder="Moons required">
-            </label>
-            <button type="submit" class="button">Search Now!</button>
-          </div> -->
         </div>
       </form>
     </div>
@@ -80,6 +72,7 @@
             <th>Bedrooms</th>
             <th>Bathrooms</th>
             <th>Published</th>
+            <th>User</th>
           </tr>
         </thead>
 
@@ -92,6 +85,7 @@
             <td><%= submission.bedrooms %></td>
             <td><%= submission.bathrooms %></td>
             <td><%= submission.publish %></td>
+            <td><%= submission.user_id %></td>
           </tr>
         </tbody>
       <% end %>

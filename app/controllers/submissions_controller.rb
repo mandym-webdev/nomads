@@ -1,5 +1,7 @@
 class SubmissionsController < ApplicationController
 
+before_action :authenticate_user!, except: [:index, :show, :new]
+
   def index
     @submissions = Submission.all
   end
@@ -14,6 +16,7 @@ class SubmissionsController < ApplicationController
 
   def create
     @submission = Submission.new(submission_params)
+    @submission.user_id = current_user.id
     if @submission.save
       redirect_to @submission
     else
@@ -24,7 +27,7 @@ class SubmissionsController < ApplicationController
   private
 
   def submission_params
-    params.require(:submission).permit(:submission_link, :location, :lodging_type, :bedrooms, :bathrooms, :img1, :img2, :img3)
+    params.require(:submission).permit(:submission_link, :location, :lodging_type, :bedrooms, :bathrooms, :img1, :img2, :img3, :user_id)
   end
 end
 
