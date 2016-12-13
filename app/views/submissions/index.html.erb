@@ -15,7 +15,7 @@
   </div>
 
   <div class="medium-5 large-3 columns">
-    <div class="callout secondary">
+    <!-- <div class="callout secondary">
       <form>
         <div class="row">
           <div class="small-12 columns">
@@ -25,7 +25,7 @@
           </div>
         </div>
       </form>
-    </div>
+    </div> -->
   </div>
 
 </div>
@@ -52,8 +52,12 @@
         <div class="column">
           <div class="callout" data-equalizer-watch>
             <p><%= submission.location %></p>
-            <p><img src="<%= submission.img1 %>" ></p>
-            <p class="lead"><%= link_to submission.title, submission %></p>
+
+            <p><img src="http://placehold.it/250x200"></p>
+
+            <!--<p><img src="<%= submission.img1 %>" ></p>-->
+
+            <p class="lead"><%= link_to submission.id, submission %></p>
             <p class="subheader"><%= submission.bedrooms %></td> Bed <%= submission.bathrooms %></td> Bath <%= submission.lodging_type %></p>
           </div>
         </div>

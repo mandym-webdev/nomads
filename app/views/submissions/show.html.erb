@@ -4,20 +4,22 @@
 
     <div class="row">
       <div class="medium-6 columns">
-        <img class="thumbnail" src="<%= @submission.img1 %>">
+<!--         <img class="thumbnail" src="<%= @submission.img1 %>">
         <div class="row small-up-4">
           <div class="column">
             <img class="thumbnail" src="<%= @submission.img2 %>">
           </div>
           <div class="column">
             <img class="thumbnail" src="<%= @submission.img2 %>">
-          </div>
-          <!-- <div class="column">
+          </div> -->
+        <img class="thumbnail" src="http://placehold.it/250x200">
+        <div class="row small-up-4">
+          <div class="column">
             <img class="thumbnail" src="http://placehold.it/250x200">
           </div>
           <div class="column">
             <img class="thumbnail" src="http://placehold.it/250x200">
-          </div> -->
+          </div>
         </div>
       </div>
       <div class="medium-6 large-5 columns">
@@ -25,8 +27,9 @@
         <p><%= link_to "View Listing", "#{@submission.submission_link}", target: "_blank", rel: "nofollow" %></a></p>
             <td>
             <p>This is a <%= @submission.bedrooms %> Bedroom, <%= @submission.bathrooms %> Bathroom <%= @submission.lodging_type %></td> located in <td><%= @submission.location %></p>
-            <p>It was submitted by: <%= @submission.user_id %></p>
-            <p>It has the following amenities:</p>
+            <!-- <p>It was submitted by: <%= @submission.user_id %></p> -->
+            <p>It has the following lodging amenities:</p>
+            <p>It has the following location amenities:</p>
 
     </div>
 

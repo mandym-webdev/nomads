@@ -8,6 +8,8 @@ class CreateSubmissions < ActiveRecord::Migration
       t.string :lodging_type
       t.string :bedrooms
       t.string :bathrooms
+      t.string :lodging_amenities
+      t.string :location_amenities
       t.string :img1
       t.string :img2
       t.string :img3
