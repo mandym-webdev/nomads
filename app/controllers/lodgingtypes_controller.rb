@@ -1,0 +1,2 @@
+class LodgingtypesController < ApplicationController
+end
