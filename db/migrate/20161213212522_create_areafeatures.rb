@@ -2,7 +2,7 @@ class CreateAreafeatures < ActiveRecord::Migration
   def change
     create_table :areafeatures do |t|
 
-      t.string :type
+      t.string :feature
 
       t.timestamps null: false
     end

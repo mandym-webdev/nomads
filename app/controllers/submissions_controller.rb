@@ -27,8 +27,10 @@ before_action :authenticate_user!, except: [:index, :show, :new]
   private
 
   def submission_params
-    params.require(:submission).permit(:submission_link, :location, :lodging_type, :bedrooms, :bathrooms, :img1, :img2, :img3, :user_id)
+    params.require(:submission).permit(:submission_link, :location, :bedrooms, :bathrooms, :img1, :img2, :img3, :user_id, :lodgingtype, areafeature:[])
   end
 end
 
+
+# params.require(:professor).permit(:name, expertise_ids:[])
 

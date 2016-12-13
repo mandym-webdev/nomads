@@ -1,5 +1,5 @@
 class Lodgingtype < ActiveRecord::Base
 
-  has_many :submissions
+  belongs_to :submission
 
 end

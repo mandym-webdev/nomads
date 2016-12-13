@@ -11,18 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160912090157) do
+ActiveRecord::Schema.define(version: 20161213213058) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "areafeatures", force: :cascade do |t|
+    t.string   "feature"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "lodgingfeatures", force: :cascade do |t|
+    t.string   "feature"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "lodgingtypes", force: :cascade do |t|
+    t.string   "lodging"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "submissions", force: :cascade do |t|
     t.string   "submission_link"
     t.string   "title"
     t.string   "location"
-    t.string   "lodging_type"
+    t.string   "lodgingtype"
     t.string   "bedrooms"
     t.string   "bathrooms"
+    t.string   "lodgingfeatures"
+    t.string   "areafeatures"
     t.string   "img1"
     t.string   "img2"
     t.string   "img3"

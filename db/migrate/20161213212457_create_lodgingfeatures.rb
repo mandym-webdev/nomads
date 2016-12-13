@@ -2,7 +2,7 @@ class CreateLodgingfeatures < ActiveRecord::Migration
   def change
     create_table :lodgingfeatures do |t|
 
-      t.string :type
+      t.string :feature
 
       t.timestamps null: false
     end
