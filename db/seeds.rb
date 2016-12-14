@@ -7,12 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Submission.delete_all
-
-5.times do |i|
-  Submission.create(submission_link: "http://testurl.com", title: "A listing.", location: "paris", lodgingtype: 1 ,bedrooms: 3, bathrooms: 2, img1: "http://i.imgur.com/bCk9Qwl.png?1", img2: "http://i.imgur.com/bCk9Qwl.png?1", img3: "http://i.imgur.com/bCk9Qwl.png?1", user_id: 1)
-end
-
 Lodgingfeature.delete_all
 
 Lodgingfeature.create([

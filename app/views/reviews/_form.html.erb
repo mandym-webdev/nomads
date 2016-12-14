@@ -32,13 +32,13 @@
             <%= f.select :currency, ["USD", "GBP", "EUR", "CAD", "AUD"]%>
           </div>
           <div class="medium-2 columns">
-            <%= f.number_field :price, placeholder: "...for how many..." %>
+            <%= f.number_field :duration, placeholder: "...for how many..." %>
           </div>
           <div class="medium-2 columns">
             <%= f.select :duration_type, ["Day(s)", "Week(s)", "Month(s)", "Year(s)"]%> 
           </div>
           <div class="medium-2 columns">
-            <%= f.select :stay_month, ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]%>
+            <%= f.select :stay_month, ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]%>
           </div>
           <div class="medium-2 columns">
             <%= f.select :stay_year, ["2015", "2016", "2017", "2018"]%>
@@ -59,11 +59,9 @@
           </div>  
       </fieldset>
 
-      <div class="medium-12 columns"><span>Would you return?  </span>
-        <%= radio_button_tag(:return, "yes") %>
-        <%= label_tag(:return_yes, "Yes") %>
-        <%= radio_button_tag(:return, "no") %>
-        <%= label_tag(:return_no, "No") %>
+      <div class="medium-12 columns">
+        <span>Yes, I would return.  </span>
+        <span><%= f.check_box :return %></span>
       </div>
     </div>
 
@@ -83,11 +81,8 @@
             <%= f.text_field :speedtest, placeholder: "Speedtest Link" %>
           </div>
           <div class="medium-6 columns">
-            <span>Was it consistent?</spam>
-            <%= radio_button_tag(:consistent, "yes") %>
-            <%= label_tag(:consistent_yes, "Yes") %>
-            <%= radio_button_tag(:consistent, "no") %>
-            <%= label_tag(:consistent_no, "No") %>
+            <span>Yes, the internet was consistent.  </span>
+            <span><%= f.check_box :consistent %></span>
           </div>
         </div>
       </fieldset>
@@ -109,4 +104,3 @@
   </div>
 <% end %>
 
-    

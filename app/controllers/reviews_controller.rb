@@ -57,7 +57,7 @@ class ReviewsController < ApplicationController
       @submission = Submission.find(params[:submission_id])
     end
 
-    def review_params
-      params.require(:review).permit(:rating, :comment, :user_id)
+    def review_params 
+      params.require(:review).permit(:rating, :comment, :user_id, :price, :currency, :duration, :duration_type, :stay_month, :stay_year, :discount, :discount_amount, :download, :upload, :speedtest, :consistent, :return, :submission_id, :kitchen, :lodging_amenities, :bed, :workspace, :value, :internet, :area_amenities, :landlord, :safety)
     end
 end
