@@ -5,6 +5,7 @@ class Submission < ActiveRecord::Base
   has_many :areafeatures
   has_many :lodgingfeatures
   belongs_to :user
+  has_many :reviews
 
 end
 

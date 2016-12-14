@@ -12,6 +12,7 @@ before_action :authenticate_user!, except: [:index, :show, :new]
 
   def show
     @submission = Submission.find( params[:id] )
+    @reviews = Review.where(submission_id: @submission.id).order("created_at DESC")
   end
 
   def create
@@ -25,6 +26,10 @@ before_action :authenticate_user!, except: [:index, :show, :new]
   end
 
   private
+
+  def set_submission
+    @submission = Submission.find(params[:id])
+  end
 
   def submission_params
     params.require(:submission).permit(:submission_link, :location, :bedrooms, :bathrooms, :img1, :img2, :img3, :user_id, :lodgingtype, areafeature:[])
