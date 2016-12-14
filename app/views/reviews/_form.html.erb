@@ -11,15 +11,102 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :rating %><br>
-    <%= f.number_field :rating %>
-  </div>
-  <div class="field">
-    <%= f.label :comment %><br>
-    <%= f.text_area :comment %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="row">
+    <div><h3>New Review</h3></div>
+    <div>
+      <div class="medium-12 columns">
+          <%= f.text_area :comment, placeholder: "Let everyone know what you liked (or didn't) about this listing." %>
+      </div>
+    </div>
+
+
+    <div class="medium-12 columns">
+
+      <fieldset class="fieldset">
+        <legend>How much did you pay and when?</legend>
+        <div class="row">
+          <div class="medium-3 columns">
+              <%= f.number_field :price, placeholder: "How much did you pay in..." %>
+          </div>
+          <div class="medium-1 columns">
+            <%= f.select :currency, ["USD", "GBP", "EUR", "CAD", "AUD"]%>
+          </div>
+          <div class="medium-2 columns">
+            <%= f.number_field :price, placeholder: "...for how many..." %>
+          </div>
+          <div class="medium-2 columns">
+            <%= f.select :duration_type, ["Day(s)", "Week(s)", "Month(s)", "Year(s)"]%> 
+          </div>
+          <div class="medium-2 columns">
+            <%= f.select :stay_month, ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]%>
+          </div>
+          <div class="medium-2 columns">
+            <%= f.select :stay_year, ["2015", "2016", "2017", "2018"]%>
+          </div>    
+        </div> 
+      </fieldset> 
+    </div>
+
+    <div class="medium-4 columns">
+      <fieldset class="fieldset">
+        <legend>Did you receive a discount?</legend>
+          <div class="medium-4 columns">
+            <%= f.check_box :discount%>
+            <%= f.label :yes %>
+          </div>
+          <div class="medium-8 columns">
+            <%= f.text_field :discount_amount, placeholder: "How much? $/%" %>
+          </div>  
+      </fieldset>
+
+      <div class="medium-12 columns"><span>Would you return?  </span>
+        <%= radio_button_tag(:return, "yes") %>
+        <%= label_tag(:return_yes, "Yes") %>
+        <%= radio_button_tag(:return, "no") %>
+        <%= label_tag(:return_no, "No") %>
+      </div>
+    </div>
+
+    <div class="medium-8 columns">
+      <fieldset class="fieldset">
+        <legend>How was the internet?</legend>
+        <div class="row">
+          <div class="medium-6 columns">
+            <%= f.text_field :download, placeholder: "Download Speed" %>
+          </div>
+          <div class="medium-6 columns">
+            <%= f.text_field :upload, placeholder: "Upload Speed" %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-6 columns">
+            <%= f.text_field :speedtest, placeholder: "Speedtest Link" %>
+          </div>
+          <div class="medium-6 columns">
+            <span>Was it consistent?</spam>
+            <%= radio_button_tag(:consistent, "yes") %>
+            <%= label_tag(:consistent_yes, "Yes") %>
+            <%= radio_button_tag(:consistent, "no") %>
+            <%= label_tag(:consistent_no, "No") %>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+
+
+      <h3>Ratings</h3>
+      <p>Please rate the following on a scale of 1-5 with 1 being terrible and 5 being wonderful.</p>
+
+    <!-- </div> -->
+
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>  
+    <%= link_to 'Back', submission_path(@submission) %>
+
   </div>
 <% end %>
+
+    
