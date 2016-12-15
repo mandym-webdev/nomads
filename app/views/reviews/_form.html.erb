@@ -93,8 +93,57 @@
       <h3>Ratings</h3>
       <p>Please rate the following on a scale of 1-5 with 1 being terrible and 5 being wonderful.</p>
 
-    <!-- </div> -->
+        <div class="medium-12 columns">
+          <div class="medium-2 columns">
+            <label>Overall Rating</label>
+            <%= f.select :rating, ["1", "2", "3", "4", "5"]%> 
+          </div>
 
+          <div class="medium-2 columns">
+            <label>Area Amenities</label>
+            <%= f.select :area_amenities, ["1", "2", "3", "4", "5"]%> 
+          </div>
+
+          <div class="medium-2 columns">
+            <label>Bed</label>
+            <%= f.select :bed, ["1", "2", "3", "4", "5"]%>
+          </div>
+
+          <div class="medium-2 columns">
+            <label>Internet</label>
+            <%= f.select :internet, ["1", "2", "3", "4", "5"]%>
+          </div>
+
+          <div class="medium-2 columns">
+            <label>Kitchen</label>
+            <%= f.select :kitchen, ["1", "2", "3", "4", "5"]%>
+          </div>
+
+          <div class="medium-2 columns">
+            <label>Landlord</label>
+            <%= f.select :landlord, ["1", "2", "3", "4", "5"]%>
+          </div>
+
+          <div class="medium-2 columns">
+            <label>Lodging Amenities</label>
+            <%= f.select :lodging_amenities, ["1", "2", "3", "4", "5"]%>
+          </div>
+
+          <div class="medium-2 columns">
+            <label>Safety</label>
+            <%= f.select :safety, ["1", "2", "3", "4", "5"]%>
+          </div>
+
+          <div class="medium-2 columns">
+            <label>Value</label>
+            <%= f.select :value, ["1", "2", "3", "4", "5"]%>
+          </div>
+
+          <div class="medium-2 columns">
+            <label>Workspace</label>
+            <%= f.select :workspace, ["1", "2", "3", "4", "5"]%>
+          </div>
+        </div>
 
     <div class="actions">
       <%= f.submit %>
